@@ -6,17 +6,16 @@
 #maksymalny udzwig postaci- kazdy przedmiot ma swoja wage
 #walki na arenie - przeciwnicy zadaja okreslona ilsoc dmg fizycznego i magizcnego w zaleznosci od swoich stat
 #staty sa zalezne od lvl potwora i sa porownywane ze statami bohatera, wstepnie mechanizm wiecej sily lub inta wygrywa z przelicznikiem dla danych stat, zwinnosc od dodgle
-def inventory1():
-    print('Witam')
-    print('Wprowadź imię swojego bohatera:')
-    yourhero= input()
+import hero
 
+def inventorycharacter():
     print(f" w porządku {yourhero} tutaj znajduje sie wyposazenie twojego czempiona azerytu: ")
 
-    inventory=("Miecz",
+    inventoryowned=("Miecz",
                "tarcza",
                "czerwone buty szybkości",
                "mikstura many")
-    print(inventory)
+    print(inventoryowned)
 
-    #print(type(twojbohater))
+def changeeq():
+    print(f"Aktualnie założone przedmioty to: {inventoryowned}")
