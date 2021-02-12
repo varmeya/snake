@@ -136,7 +136,6 @@ def game():
             if score == 2:
                 infomessage("Przechodzisz na poziom 2", (200, 50, 0))
                 snakespeed += 30
-
         clock.tick(tempsnakespeed)
         snakespeed = tempsnakespeed
     pygame.quit()
