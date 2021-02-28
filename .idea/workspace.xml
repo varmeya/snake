@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be4099c9-8ca2-46a9-b562-1f6150fe73ae" name="Default Changelist" comment="dodanie przeszkod generowanych losowo">
-      <changelist_data name="Varmy" email="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="true" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,7 +38,8 @@
         <entry key="$PROJECT_DIR$/.." value="Game" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="73561e12-dcfa-4c96-9e63-683af5dabfaf" />
@@ -82,7 +89,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="be4099c9-8ca2-46a9-b562-1f6150fe73ae" name="Default Changelist" comment="" />
-      <changelist id="" name="New changelist" comment="" />
       <created>1612022007823</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -102,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612097086440</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dodanie przeszkod generowanych losowo">
+      <created>1613148776094</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613148776094</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dodanie przeszkod generowanych losowo">
+      <created>1613148848661</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613148848661</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +145,7 @@
     </ignored-roots>
     <MESSAGE value="Snake game in pygames- start" />
     <MESSAGE value="dodano dzialajaca kolizje, zwiekszanie sie weza po zjedzeniu punktu, ekran koncowy, wynik" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodano dzialajaca kolizje, zwiekszanie sie weza po zjedzeniu punktu, ekran koncowy, wynik" />
+    <MESSAGE value="dodanie przeszkod generowanych losowo" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie przeszkod generowanych losowo" />
   </component>
 </project>

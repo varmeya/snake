@@ -4,7 +4,7 @@ import random
 
 pygame.init()
 
-
+snakespeed = 10
 displaywidth = 800
 displayheight = 600
 
@@ -15,8 +15,6 @@ clock = pygame.time.Clock()
 
 snakeblock = 10
 
-
-
 fontstyle = pygame.font.SysFont("arial", 25)
 scorefont = pygame.font.SysFont("comicsansms", 35)
 
@@ -25,7 +23,7 @@ scorefont = pygame.font.SysFont("comicsansms", 35)
 def score(score):
     value = scorefont.render("Wynik: " + str(score), True, (200, 0, 50))
     display.blit(value, [0, 0])
-
+    return score
 
 
 def snake(snakeblock, snakelist):
@@ -36,6 +34,11 @@ def snake(snakeblock, snakelist):
 def infomessage(msg, color):
     msg = fontstyle.render(msg, True, color)
     display.blit(msg, [displaywidth / 6, displayheight / 3])
+
+
+def level(level):
+    value = scorefont.render("Poziom: " + str(level), True, (170, 0, 70))
+    display.blit(value, [650, 0])
 
 
 
@@ -52,6 +55,7 @@ def game():
     snakelist = []
     lengthsnake = 1
 
+
     pointx = round(random.randrange(0, displaywidth - snakeblock) / 10.0) * 10.0
     pointy = round(random.randrange(0, displayheight - snakeblock) / 10.0) * 10.0
 
@@ -63,7 +67,8 @@ def game():
     while not gameover:
         while gameclose == True:
             display.fill((50, 50, 50))
-            infomessage("Ręka złamana :( wciśnij S aby rozpocząć grę lub Q aby wyjść", (30, 30, 30))
+            infomessage(f"Twój wynik to {score(lengthsnake-1)}."
+                        f"Wciśnij S aby rozpocząć grę lub Q aby wyjść", (30, 30, 30))
             score(lengthsnake - 1)
             pygame.display.update()
 
@@ -116,6 +121,20 @@ def game():
         snake(snakeblock, snakelist)
         score(lengthsnake - 1)
 
+        def gamelvl():
+            if score(lengthsnake - 1) < 10:
+                level(1)
+            elif score(lengthsnake - 1) <= 11:
+                level(2)
+            elif score(lengthsnake - 1) <= 30:
+                level(3)
+            elif score(lengthsnake - 1) <= 40:
+                level(4)
+            elif score(lengthsnake - 1) <= 50:
+                level(5)
+        gamelvl()
+
+
 
 
 
@@ -125,23 +144,18 @@ def game():
             pointy2 = round(random.randrange(0, displayheight - snakeblock) / 10.0) * 10.0
             gameclose= True
 
-        snakespeed = 15
-        tempsnakespeed = snakespeed
+
         if x1 == pointx and y1 == pointy:
             pointx = round(random.randrange(0, displaywidth - snakeblock) / 10.0) * 10.0
             pointy = round(random.randrange(0, displayheight - snakeblock) / 10.0) * 10.0
             lengthsnake += 1
-        #ustalanie poziomów na podstawie punktow
-        if score:
-            if score == 2:
-                infomessage("Przechodzisz na poziom 2", (200, 50, 0))
-                snakespeed += 30
-        clock.tick(tempsnakespeed)
-        snakespeed = tempsnakespeed
+
+
+
+        clock.tick(snakespeed)
+
+
     pygame.quit()
     quit()
-
-
-
 
 game()
